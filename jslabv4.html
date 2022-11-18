@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Javascript Lab</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body> 
+    <p>
+        <h1>
+            JavaScript Convert Grades
+        </h1>
+        <br>
+
+     <p> 
+    Please enter the numeric grade (0-100) :  
+    <input id="numericGrade"/> 
+    <button onclick="convert()"> Convert </button>
+</p>
+<br> 
+
+    <p> 
+    <h2 id="gradeDisplay"></h2>
+</p>
+<script> 
+const numericGrade = document.getElementById(
+    'numericGrade'
+);
+const gradeDisplay = document.getElementById(
+    'gradeDisplay'
+);
+
+function convert() {
+    const numeric = parseInt(numericGrade.value);
+    let grade; 
+
+    if (numeric > 100 || numeric < 0) { 
+        alert("Grades should be a number between 0 and 100")
+    } else if (numeric >= 90 ) {
+        grade = 'A';
+    }
+    else if (numeric >= 80 ) {
+        grade = 'B';
+    }
+    else if (numeric >= 70) {
+        grade = 'C';
+    }
+    else if (numeric >= 60) {
+        grade = 'D';
+        
+    }
+    else  {
+        grade = 'F';
+    }
+    
+    
+    console.log(grade);
+    gradeDisplay.innerHTML = `${grade}`;
+}
+
+
+</script>

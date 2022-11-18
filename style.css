@@ -1,0 +1,11 @@
+body{
+    background-color: gray;
+}
+
+#displaygrade{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+fieldset{
+    border: none;
+}
